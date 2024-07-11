@@ -1,0 +1,18 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr ; /* Tres columnas de igual ancho */
+    grid-template-rows: 1fr 1fr ; /* Dos filas de igual altura */
+    gap: 10px; /* Espacio entre los elementos */
+    padding: 10px;
+}
+.grid-item {
+    background-color: #4CAF50; /* Color de fondo predeterminado */
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+.grid-item.special {
+    background-color: #2196F3; /* Color de fondo diferente para la segunda y tercera columna */
+    grid-column: span 2; /* Fusiona la celda con dos columnas */
+}
