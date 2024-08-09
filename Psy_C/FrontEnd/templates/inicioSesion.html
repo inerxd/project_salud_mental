@@ -4,16 +4,41 @@
 {% block title %}Files{% endblock %}
 
 {% block customCSS%}
-<link rel="stylesheet" href="{% static 'css/grid.css' %}">
+<link rel="stylesheet" href="{% static 'css/LoginCSS.css' %}">
 
 {% endblock %}
 
 {% block body %}
-<div class="container">
+<div class="containerLogin" id="LoginCSS">
 
-    <h1>pagina de login</h1>
+    <form action="" method="get">
+        <div>
+            <input type="text" name="" id="">
+            <label for="">Inicio de sesion</label>
+        </div>
 
-    
+        <div>
+            <input type="password" name="" id="">
+            <label for="">Contrasella</label>
+        </div>
+        
+        <div>
+            <input type="text" name="" id="">
+            <label for="">Repetir Contrasella</label>
+        </div>
+
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+
+
+
+
+
+
+
+
 
 </div>
 
