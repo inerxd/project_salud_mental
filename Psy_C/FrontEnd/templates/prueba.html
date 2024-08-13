@@ -1,15 +1,15 @@
-{% extends './layaut.html' %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prueba</title>
+    <link rel="stylesheet" href="{% static 'css/LoginCSS.css' %}">
+</head>
+<body>
 
-{% block title %}Files{% endblock %}
-
-{% block customCSS%}
-<link rel="stylesheet" href="{% static 'css/LoginCSS.css' %}">
-
-{% endblock %}
-
-{% block body %}
-<div class="contendorExterior" id="contendorExterior">
+    <div class="contendorExterior" id="contendorExterior">
     <div class="contendorInterior" id="contendorInterior">
 
         <form action="" method="get">
@@ -37,9 +37,6 @@
     </div>
 </div>
 
-{% block CustomJS %}
-
-{% endblock %}
-
-
-{% endblock %}
+    
+</body>
+</html>

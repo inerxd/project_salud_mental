@@ -7,5 +7,6 @@
             "database": "${workspaceFolder:projectdjango}/Psy_C/db.sqlite3",
             "name": "text"
         }
-    ]
+    ],
+    "python.REPL.enableREPLSmartSend": false
 }

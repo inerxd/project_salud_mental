@@ -19,13 +19,16 @@ from FrontEnd.views import IndexViews
 from FrontEnd.views import infoPagina
 from FrontEnd.views import losProblemas
 from FrontEnd.views import inicioSesion
-
+from FrontEnd.views import prueba
+# estas son las urls de la pagina para visualizar
 urlpatterns = [
+    # estas es urls de admin
     path('admin/', admin.site.urls),
-    path('index/', IndexViews, name='index'),
+    path('', IndexViews, name='index'),
     path('info/', infoPagina, name='info_pagina'),
     path('problemas/', losProblemas, name='los_problemas'),
     path('login/', inicioSesion, name='inicio_sesion'),
-    path('', infoPagina, name='home'),  # Definimos infoPagina como la página de inicio
+    path('prueba/', prueba),
+      
 
 ]

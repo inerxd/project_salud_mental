@@ -1,7 +1,21 @@
-.containerLogin{
-display: flex;
-background-color:white;
-margin: 25%;
-width: 25%;
-;
+.contendorExterior {
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo negro con transparencia */
+    backdrop-filter: blur(10px); /* Desenfoque del fondo */
+    -webkit-backdrop-filter: blur(10px); /* Desenfoque del fondo para Safari */
+    border-radius: 15px; /* Bordes redondeados */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde blanco muy transparente */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Sombra más oscura */
+    padding: 20px; /* Espaciado interior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.contendorInterior {
+    background-color: rgba(0, 0, 0, 0.225); /* Fondo negro semi-transparente para el hijo */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra más oscura para el hijo */
+    color: white; /* Texto en blanco para contraste */
 }
