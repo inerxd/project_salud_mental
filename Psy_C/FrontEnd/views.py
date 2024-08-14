@@ -6,8 +6,8 @@ from django.shortcuts import render
 def IndexViews(request):
     return render(request,'index.html')
 
-def infoPagina(request):
-    return render(request,'infoPagina.html')
+def Nosostros(request):
+    return render(request,'nosotros.html')
 
 def losProblemas(request):
     return render(request,'losProblemas.html')

@@ -1,24 +1,29 @@
 {% extends './layaut.html' %}
 {% load static %}
 
-{% block title %}Files{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block customCSS%}
 <link rel="stylesheet" href="{% static 'css/grid.css' %}">
+<link href="{% static 'images/home_icon.ico' %}" rel="icon" type="image/x-icon" />
+
 
 {% endblock %}
 
 {% block body %}
-<div class="body-frontend">
+<div class="padreIndex">
 
+    <h1>Prueba de contenido</h1>
+    <p>prueba2</p>
+    <div class="grid-container">
+        <div class="grid-item item1a">1a</div>
+        <div class="grid-item item1b">1b</div>
+        <div class="grid-item item2">2</div>
+        <div class="grid-item item3a">3a</div>
+        <div class="grid-item item3b">3b</div>
 
-    <div class="grid-item">1</div>
-    <div class="grid-item special">2  </div>
-    <div class="grid-item">4</div>
-    <div class="grid-item">4</div>
-    <div class="grid-item">5</div>
-    <div class="grid-item">6</div>
-
+    </div>
+    <p>prueba</p>
 </div>
 
 {% block CustomJS %}

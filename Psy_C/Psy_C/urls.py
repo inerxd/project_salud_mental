@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from FrontEnd.views import IndexViews
-from FrontEnd.views import infoPagina
+from FrontEnd.views import Nosostros
 from FrontEnd.views import losProblemas
 from FrontEnd.views import inicioSesion
 from FrontEnd.views import prueba
@@ -25,10 +25,10 @@ urlpatterns = [
     # estas es urls de admin
     path('admin/', admin.site.urls),
     path('', IndexViews, name='index'),
-    path('info/', infoPagina, name='info_pagina'),
+    path('nosotros/', Nosostros, name='Nosotros'),
     path('problemas/', losProblemas, name='los_problemas'),
     path('login/', inicioSesion, name='inicio_sesion'),
-    path('prueba/', prueba),
+   
       
 
 ]
