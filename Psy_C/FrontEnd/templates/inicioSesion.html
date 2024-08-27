@@ -12,7 +12,8 @@
 <div class="contendorExterior" id="contendorExterior">
     <div class="contendorInterior" id="contendorInterior">
 
-        <form action="" method="get">
+        <form action="" method="post">
+            {% csrf_token %}
             <div>
                 <input type="email" name="email" id="email">
                 <label for="email">Inicio de sesion</label>
@@ -22,11 +23,11 @@
                 <input type="password" name="password" id="password">
                 <label for="password">Contrasella</label>
             </div>
-
+            <!--
             <div>
                 <input type="password" name="repetirPassword" id="repetirPassword">
                 <label for="repetirPassword">Repetir Contrasella</label>
-            </div>
+            </div>-->
 
             <div>
                 <button type="submit">Login</button>

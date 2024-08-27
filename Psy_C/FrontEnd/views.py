@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from backend.models import Indentificador,TypeUser
+
 #from django.http import HttpResponse
 
 # Create your views here.
@@ -13,9 +15,42 @@ def losProblemas(request):
     return render(request,'losProblemas.html')
 
 def inicioSesion(request):
-    return render(request,'inicioSesion.html')
+    if request.method == 'GET':
+        return render(request,'inicioSesion.html')
+    
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        
+        # Buscar el usuario por email
+        identificadores = Indentificador.objects.filter(email=email)
+        
+        if identificadores.exists():
+            identificador = identificadores.first()
+            
+            # Verificar la contraseña directamente (deberías usar hashing en producción)
+            if password == identificador.password:
+                
+                
+                # Verificar el tipo de usuario
+                if identificador.TypeUserId.id == 1:
+                    # Redirigir a la vista de administrador
+                   return render(request, 'losProblemas.html')
+                else:
+                    # Usuario no es administrador
+                    return print("error")
+            else:
+                # Contraseña incorrecta
+                return print("error")
+        else:
+            # El email no existe
+            return print("error")
+    
 
-def prueba(request):
-    return render(request,'prueba.html')
+
+            
+       
+
+
 
 

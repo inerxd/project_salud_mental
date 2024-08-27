@@ -19,7 +19,7 @@ from FrontEnd.views import IndexViews
 from FrontEnd.views import Nosostros
 from FrontEnd.views import losProblemas
 from FrontEnd.views import inicioSesion
-from FrontEnd.views import prueba
+
 # estas son las urls de la pagina para visualizar
 urlpatterns = [
     # estas es urls de admin
