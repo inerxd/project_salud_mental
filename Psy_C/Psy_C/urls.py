@@ -15,10 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from FrontEnd.views import IndexViews
-from FrontEnd.views import Nosostros
-from FrontEnd.views import losProblemas
-from FrontEnd.views import inicioSesion
+from FrontEnd.views import IndexViews,Nosostros,losProblemas,inicioSesion,signUp
+from backend.views import dasbord
 
 # estas son las urls de la pagina para visualizar
 urlpatterns = [
@@ -28,7 +26,8 @@ urlpatterns = [
     path('nosotros/', Nosostros, name='Nosotros'),
     path('problemas/', losProblemas, name='los_problemas'),
     path('login/', inicioSesion, name='inicio_sesion'),
-   
+    path('dasbord/',dasbord),
+    path('signUp/',signUp),
       
 
 ]

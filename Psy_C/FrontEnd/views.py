@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from backend.models import Indentificador,TypeUser
+from backend.views import dasbord
 
 #from django.http import HttpResponse
 
@@ -35,17 +36,19 @@ def inicioSesion(request):
                 # Verificar el tipo de usuario
                 if identificador.TypeUserId.id == 1:
                     # Redirigir a la vista de administrador
-                   return render(request, 'losProblemas.html')
+                   return render(request, dasbord(request))
                 else:
                     # Usuario no es administrador
-                    return print("error")
+                    return render(request,'inicioSesion.html')
             else:
                 # Contraseña incorrecta
-                return print("error")
+                return render(request,'inicioSesion.html')
         else:
             # El email no existe
-            return print("error")
-    
+            return render(request,'inicioSesion.html')
+
+def signUp(request):
+    return render(request,'signUp.html')
 
 
             

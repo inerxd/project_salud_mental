@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing up</title>
+    <link rel="stylesheet" href="{% static 'css/LoginCSS.css' %}">
+<link href="{% static 'images/imagen_Login.ico' %}" rel="icon" type="image/x-icon" />
+</head>
+<body>
+    <div class="contendorExterior" id="contendorExterior">
+        <div class="contendorInterior" id="contendorInterior">
+    
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="email">Inicio de sesion:</label>
+                    <input type="email" name="email" id="email">
+                    
+                </div>
+    
+                <div class="form-group">
+                    <label for="password">Contrasella:</label>
+                    <input type="password" name="password" id="password">
+            
+                </div>
+                <!--
+                <div>
+                    <input type="password" name="repetirPassword" id="repetirPassword">
+                    <label for="repetirPassword">Repetir Contrasella</label>
+                </div>-->
+    
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+    
+    
+        </div>
+    </div>
+</body>
+</html>

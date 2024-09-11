@@ -19,3 +19,20 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra más oscura para el hijo */
     color: white; /* Texto en blanco para contraste */
 }
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.estilo1 {
+    display: flex; /* Asegura que el label esté en una línea separada */
+    margin-bottom: 10px; /* Da espacio entre el label y la casilla */
+    font-weight: bold; /* Opcional, para hacer el texto más visible */
+}
+
+.estilo2 {
+    width: 100%; /* Haz que el campo ocupe el ancho disponible */
+    padding: 5px; /* Añade un poco de espacio interno al campo */
+    box-sizing: border-box; /* Para asegurarse de que el ancho se respete con el padding */
+}
+
