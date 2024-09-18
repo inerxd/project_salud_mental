@@ -1,38 +1,106 @@
+/* Contenedor principal */
 .contendorExterior {
-    background-color: rgba(0, 0, 0, 0.2); /* Fondo negro con transparencia */
-    backdrop-filter: blur(10px); /* Desenfoque del fondo */
-    -webkit-backdrop-filter: blur(10px); /* Desenfoque del fondo para Safari */
-    border-radius: 15px; /* Bordes redondeados */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde blanco muy transparente */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Sombra más oscura */
-    padding: 20px; /* Espaciado interior */
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ocupa toda la altura de la ventana */
+    min-height: 100vh;
 }
 
+/* Contenedor interior */
 .contendorInterior {
-    background-color: rgba(0, 0, 0, 0.225); /* Fondo negro semi-transparente para el hijo */
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.225);
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra más oscura para el hijo */
-    color: white; /* Texto en blanco para contraste */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
-.form-group {
-    margin-bottom: 5px;
-}
-
+/* Estilo para labels */
 .estilo1 {
-    display: flex; /* Asegura que el label esté en una línea separada */
-    margin-bottom: 10px; /* Da espacio entre el label y la casilla */
-    font-weight: bold; /* Opcional, para hacer el texto más visible */
+    display: block; /* Asegura que el label ocupe toda la línea */
+    margin-bottom: 5px; /* Espacio entre el label y el input */
+    color: white;
 }
 
+/* Estilo para todos los inputs */
 .estilo2 {
-    width: 100%; /* Haz que el campo ocupe el ancho disponible */
-    padding: 5px; /* Añade un poco de espacio interno al campo */
-    box-sizing: border-box; /* Para asegurarse de que el ancho se respete con el padding */
+    width: 100%; /* Ajusta el ancho del input al 75% */
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    display: inline-block;
 }
 
+/* Contenedor del botón de mostrar/ocultar contraseña */
+.estilo3 {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Estilo para el icono */
+.estilo3 i {
+    width: 20px;
+    height: 20px;
+    font-size: inherit;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+/* Contenedor que alinea el input de contraseña y el botón */
+.input-container {
+    display: flex;
+    align-items: center;
+    position: relative; /* Asegura que el botón se posicione correctamente */
+}
+
+/* Contenedor del input con el botón de mostrar/ocultar */
+.input-container input {
+    width: 85%; /* Mantiene el ancho fijo del input */
+}
+
+/* Asegura que el botón no afecte el ancho del input */
+.input-container button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.botondesubmit {
+    padding: 10px;
+    display: flex; 
+    justify-content: center;
+}
+
+.registrate{
+    color: black;
+    display: flex;
+    margin-top: -15px;
+    margin-left: 80%;
+}
+
+ a:visited {
+    color: black; /* Color del enlace después de hacer clic */
+}
+
+ a:hover {
+    color: black; /* Mantén el color negro cuando pasas el ratón por encima */
+}
+
+ a:active {
+    color: black; /* Color durante el clic */
+}

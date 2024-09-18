@@ -14,33 +14,34 @@
 
         <form action="" method="post">
             {% csrf_token %}
-            <div>
-                <label class="form-group estilo1" for="email">Inicio de sesion:</label>
+            
+            <div class="form-group">
+                <label class="estilo1" for="email">Inicio de sesión:</label>
                 <input class="estilo2" type="email" name="email" id="email">
             </div>
 
-            <div>
-                <label class="form-group estilo1" for="password">Contrasella:</label>
-                <input class="estilo2" type="password" name="password" id="password">
-                <button  class="btn-lg btn-light" style="margin: 1%;"  type="button" onclick="mostrarOcultarContrasena()">
-                    <span id="iconoMostrarOcultar" ><i class="fas fa-eye"></i></span> 
-                  </button>
+            <div class="form-group">
+                <label class="estilo1" for="password">Contraseña:</label>
+                <div class="input-container">
+                    <input class="estilo2" type="password" name="password" id="password">
+                    <button class="btn-sm btn-light estilo3" type="button" onclick="mostrarOcultarContrasena(event)">
+                        <span id="iconoMostrarOcultar"><i class="fas fa-eye"></i></span>
+                    </button>
+                </div>
             </div>
-            <!--
-            <div>
-                <input type="password" name="repetirPassword" id="repetirPassword">
-                <label for="repetirPassword">Repetir Contrasella</label>
-            </div>-->
+
+            <div class="botondesubmit">
+                <button class="btn-sm btn-light" type="submit">Login</button>
+            </div>
 
             <div>
-                <button type="submit">Login</button>
-               
+                <a class="registrate" href="#">Registrate</a>
             </div>
         </form>
 
-
     </div>
 </div>
+
 
 {% block CustomJS %}
 <script src="{% static 'js/visualizarPassword.js'%}"></script>
