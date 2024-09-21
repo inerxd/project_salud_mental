@@ -14,16 +14,16 @@
 
         <form action="" method="post">
             {% csrf_token %}
-            
+
             <div class="form-group">
-                <label class="estilo1" for="InicioSession">Inicio de sesión:</label>
+                <label class="estilo1" for="Registro">Registro</label>
             </div>
 
             <div class="form-group">
-                <label class="estilo1" for="email">Correo:</label>
+                <label class="estilo1" for="email">Correo electronico:</label>
                 <input class="estilo2" type="email" name="email" id="email">
             </div>
-
+            <div id="error"></div>
             <div class="form-group">
                 <label class="estilo1" for="password">Contraseña:</label>
                 <div class="input-container">
@@ -33,14 +33,24 @@
                     </button>
                 </div>
             </div>
+ <!-- otra solucion pero quedo con la mia <button class="btn-sm btn-light estilo3" type="button" onclick="mostrarOcultarContrasena(event, 'password', 'iconoMostrarOcultar')">-->
+            <div>
+                <label class="estilo1" for="password">repetir contraseña:</label>
+                <div class="input-container">
+                    <input class="estilo2" type="password" id="repetirPassword">
+                    
+                    <button class="btn-sm btn-light estilo3" type="button" onclick="mostrarOcultarContrasena2(event)">
+                        <span id="iconoMostrarOcultar2"><i class="fas fa-eye"></i></span>
+                    </button>
+                </div>
+            </div>
+            <div id="miDiv"></div> 
 
             <div class="botondesubmit">
                 <button class="btn-sm btn-light" type="submit">Login</button>
             </div>
 
-            <div>
-                <a class="registrate" href="{% url 'registro' %}">Registrate</a>
-            </div>
+
         </form>
 
     </div>
@@ -49,6 +59,7 @@
 
 {% block CustomJS %}
 <script src="{% static 'js/visualizarPassword.js'%}"></script>
+<script src="{% static 'js/validaciones.js' %}"></script>
 {% endblock %}
 
 
