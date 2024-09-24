@@ -1,7 +1,7 @@
 /* mi solucion */
 
-function mostrarOcultarContrasena(e) {
-    e.preventDefault();
+function mostrarOcultarContrasena() {
+
    
     let contrasenaInput = document.getElementById("password");
     let iconoMostrarOcultar = document.getElementById("iconoMostrarOcultar");
@@ -39,25 +39,6 @@ function mostrarOcultarContrasena2(e) {
     }
 }
 
-// Escucha el evento 'input' en el campo 'repetirPassword'
-document.getElementById('repetirPassword').addEventListener('input',() => {
-    coincidenciaContraseña();
-});
-
-function coincidenciaContraseña() {
-    let password = document.getElementById('password').value;
-    let repetirPassword = document.getElementById('repetirPassword').value;
-    let midiv = document.getElementById('miDiv'); // Seleccionando el div para el mensaje
-
-    // Limpia el mensaje anterior antes de añadir uno nuevo
-    midiv.innerHTML = '';
-
-    if (repetirPassword !== password) {
-        let mensaje = document.createElement('p');
-        mensaje.textContent = "Las contraseñas no coinciden";
-        midiv.appendChild(mensaje); // Añadir el mensaje al div
-    }
-}
 
 
 /* otra solucion

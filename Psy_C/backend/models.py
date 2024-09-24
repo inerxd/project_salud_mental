@@ -26,7 +26,7 @@ class Indentificador(models.Model):
     password = models.CharField(max_length=45)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_update = models.DateTimeField(auto_now=True)
-    TypeUserId = models.ForeignKey(TypeUser , on_delete=models.CASCADE , db_column='type_user_id')
+    TypeUserId = models.ForeignKey(TypeUser , on_delete=models.CASCADE , db_column='type_user_id',default=3)
 
 # devuelve una cadena de datos de Indentificador y poder trabajar con ellos en el
 # panel de administracion
