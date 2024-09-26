@@ -51,8 +51,6 @@ def inicioSesion(request):
 def RegistroUser(request):
     return render(request,'registroUser.html')
 
-def signUp(request):
-    return render(request,'signUp.html')
 
 
             

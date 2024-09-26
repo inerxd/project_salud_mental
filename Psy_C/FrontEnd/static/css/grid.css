@@ -44,3 +44,7 @@
     grid-column: 2 / 3; /* Ocupa la tercera columna */
     grid-row: 3 / 4; /* En la tercera fila */
 }
+
+.prueba{
+    background-color:#ffebcd;
+}
