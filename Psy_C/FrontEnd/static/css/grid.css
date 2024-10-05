@@ -4,14 +4,14 @@
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr ; /* Tres columnas iguales */
-    grid-template-rows: 1fr 1f 1fr; /* Tres filas automáticas */
+    grid-template-rows: 1fr 1fr 1fr; /* Tres filas automáticas */
     gap: 10px; /* Espacio entre los elementos */
     padding: 10px;
   
 }
 
 .grid-item {
-    background-color: #4CAF50; /* Color de fondo predeterminado */
+    /* Color de fondo predeterminado */
     border: 1px solid #ccc;
     text-align: center;
     padding: 20px;
@@ -19,8 +19,15 @@
 }
 
 .item1a {
+   
     grid-column: 1 / 2; /* Ocupa la primera columna */
     grid-row: 1 / 2; /* En la primera fila */
+}
+
+.item1a img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 100%; /* Asegúrate de que no exceda el contenedor */
 }
 
 .item1b {
@@ -45,6 +52,3 @@
     grid-row: 3 / 4; /* En la tercera fila */
 }
 
-.prueba{
-    background-color:#ffebcd;
-}
