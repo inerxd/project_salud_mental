@@ -3,35 +3,29 @@
 
 {% block title %}Home{% endblock %}
 
-{% block customCSS%}
+{% block customCSS %}
 <link rel="stylesheet" href="{% static 'css/grid.css' %}">
 <link href="{% static 'images/home_icon.ico' %}" rel="icon" type="image/x-icon" />
-
-
 {% endblock %}
 
 {% block body %}
-<div class="grid-container">
-    <div class="grid-item item1a">
-        <img src="{% static 'images/fondo1.jpg' %}" alt="Imagen 1">
+<div class="padreIndex">
+    <div class="cajaTexto">
+      <p>¿Qué esperas para levantarte o cambiar tu vida? No me 
+        digas que siempre te sientes mal o cuando te dicen "¿por qué no 
+        cambias tu vida?".<br> Así como ves esta imagen de fondo, así están 
+        tu cuerpo, tu alma y tu mente. Pero mira, no eres el único  
+        en estar así, y sí, te diré <br> estas palabras: puedes cambiar. 
+        Muy cliché, lo sé, pero primero tienes que aceptar ayuda.
+      </p>
     </div>
-    <div class="grid-item item1b">
-        <img src="{% static 'images/fondo2.jpg' %}" alt="Imagen 2">
-    </div>
-    <div class="grid-item item2">
-        Contenido en el medio
-    </div>
-    <div class="grid-item item3a">
-        <img src="{% static 'images/fondo3.jpg' %}" alt="Imagen 3">
-    </div>
-    <div class="grid-item item3b">
-        <img src="{% static 'images/fondo4.jpg' %}" alt="Imagen 4">
-    </div>
+    <div class="gota"></div>
+    <div class="gota"></div>
+    <div class="gota"></div>
+    <div class="gota"></div>
 </div>
 
+
 {% block CustomJS %}
-
 {% endblock %}
-
-
 {% endblock %}
