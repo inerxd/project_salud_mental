@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: flex-start; /* Alinea el contenido hacia arriba */
     align-items: center; /* Centra horizontalmente */
-    background-color: bisque;
+    background-color: #D3D3D3;
     height: 100vh; /* O bien puedes usar un valor fijo en píxeles si prefieres */
     padding-top: 20px; /* Ajusta el margen superior si es necesario */
   }

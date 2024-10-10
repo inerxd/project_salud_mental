@@ -7,7 +7,6 @@
 
 html, body {
     height: 100%;
-    color: black;
 }
 
 body {
@@ -15,7 +14,6 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: white;
 }
 
 /* Estilos para el contenedor principal */
@@ -87,12 +85,14 @@ body {
     left: calc(10% + 80% * random()); /* Posición aleatoria para cada gota */
 }
 
-nav, footer {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-}
+
 
 p {
     font-family: 'Roboto', sans-serif;
     color: black;
+}
+
+.prueba{
+    font-family: "Roboto", sans-serif;
+    color:black
 }
