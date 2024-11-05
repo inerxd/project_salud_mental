@@ -51,7 +51,7 @@ class DatosUsuarios(models.Model):
 # devuelve una cadena de datos de DatosUsuarios y poder trabajar con ellos en el
 # panel de administracion
     def __str__(self):
-        return self.name
+        return f"{self.name} {self.apellidos} ({self.identificador.email})"
 
 # para que  coincidan el nombre del la tabla DatosUsuarios del modelo
 # y la bade de datos     
@@ -82,6 +82,28 @@ class TypePermisosUser(models.Model):
     class Meta:
         db_table = 'tipo_permisos_usuarios'  # Nombre exacto de la tabla intermedia en la base de datos
         unique_together = ('type_user_id', 'permisos_id')  # Asegura que la combinación sea única
+
+class Preguntas(models.Model):
+    categoria = models.CharField(max_length=45)
+    nombreEncuesta = models.CharField(max_length=45)
+    pregunta = models.CharField(max_length=45)
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
+    fecha_update = models.DateTimeField(auto_now=True)
+ 
+
+    def __str__(self):
+        return f"{self.categoria} {self.nombreEncuesta} {self.pregunta} {self.fecha_creacion}"
+    
+class Respuesta(models.Model):
+    respuesta = models.CharField(max_length=500)
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
+    preguntasId = models.ForeignKey(Preguntas , on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.respuesta} {self.fecha_creacion} ({self.preguntasId.pregunta})"
+    
+
+        
 
 
 
