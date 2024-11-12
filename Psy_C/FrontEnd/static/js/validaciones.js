@@ -1,3 +1,4 @@
+let a = 1;
 let inputEmail = document.querySelector("#email");
 let errorDiv = document.querySelector('#error');
 let Div1 = document.querySelector('#campo1');

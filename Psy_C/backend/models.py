@@ -86,9 +86,10 @@ class TypePermisosUser(models.Model):
 class Preguntas(models.Model):
     categoria = models.CharField(max_length=45)
     nombreEncuesta = models.CharField(max_length=45)
-    pregunta = models.CharField(max_length=45)
+    pregunta = models.CharField(max_length=255)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_update = models.DateTimeField(auto_now=True)
+    idEmail = models.ForeignKey(Indentificador,on_delete=models.CASCADE)
  
 
     def __str__(self):
@@ -97,10 +98,12 @@ class Preguntas(models.Model):
 class Respuesta(models.Model):
     respuesta = models.CharField(max_length=500)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
-    preguntasId = models.ForeignKey(Preguntas , on_delete=models.CASCADE)
+    fecha_update = models.DateTimeField(auto_now=True)
+    idPreguntas = models.ForeignKey(Preguntas,on_delete=models.CASCADE)
+    idEmail = models.ForeignKey(Indentificador,on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.respuesta} {self.fecha_creacion} ({self.preguntasId.pregunta})"
+        return f"{self.respuesta} {self.fecha_creacion} ({self.idPreguntas.pregunta})"
     
 
         
